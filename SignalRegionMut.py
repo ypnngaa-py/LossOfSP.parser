@@ -10,7 +10,7 @@ for r in open('../../../MutationDensity_Project/Dataset_Mutation/sub_Uni_SNPdb_n
     rs=r.strip().split('\t')
     if rs[1] in dic:
         #if int(rs[2])<=int(dic[rs[1]].split('\t')[4]):
-        if int(rs[2])<=70 and int(rs[2])>int(dic[rs[1]].split('\t')[4]):
+        if int(rs[2])<=70:
             f1.write('\t'.join(rs+dic[rs[1]].split('\t'))+'\n')
 
     
@@ -19,5 +19,5 @@ for r in open('../../../MutationDensity_Project/Dataset_Mutation/sub_Uni_BioMuta
     rs=r.strip().split('\t')
     if rs[1] in dic:
         #if int(rs[2])<=int(dic[rs[1]].split('\t')[4]):
-        if int(rs[2])<=70 and int(rs[2])>int(dic[rs[1]].split('\t')[4]):
+        if int(rs[2])<=70:
             f2.write('\t'.join(rs+dic[rs[1]].split('\t'))+'\n')
